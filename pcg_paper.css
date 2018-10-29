@@ -9,7 +9,7 @@
    Author: Ryan Wahl
    Date:   10.25.18
 
-   Filename:         pcg_paper.css
+   Filename:     pcg_paper.css
    Supporting Files: 
 
 */
@@ -64,6 +64,8 @@ body {
     /* Six rows defined, only three will contain content. */
     grid-template-columns: 22% 3% 50% 3% 22%;
 }
+
+/* Defines what elements go into which grid(s) */
 
 header {
     /* Puts the header intothe first row and in all of the columns. */
@@ -125,10 +127,27 @@ div {
 }
 
 /* This class controls if a link is a sub item. */
-.sub {
+[class^="sub"] {
     position: absolute;
-    left: 6em;
+    /* 6em */
+    left: 1em;
     bottom: 0px;
+    min-width: 100%;
+}
+
+/* Changes the left position to match the others on the page. */
+.sub0 {
+    left: 1.2em;
+}
+
+/* Changes the left position to match the others on the page. */
+.sub1 {
+    left: 1.7em;
+}
+
+/* Changes the left position to match the others on the page. */
+.sub2 {
+    left: 2.5em;
 }
 
 /* Adds arrows (>>) infront of the sub links. */
@@ -170,6 +189,7 @@ aside nav {
     text-align: center;
 }
 
+/* The Column div within all of the aside elements. */
 aside>nav>div>div {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -180,6 +200,7 @@ aside>nav>div>div a {
     text-decoration: none;
 }
 
+/* When they hover over the div element. */
 aside>nav>div>div:hover {
     background-color: rgb(113, 187, 248);
 }
@@ -192,6 +213,7 @@ aside.left>nav>div:nth-of-type(2)>div {
 
 /*
     Article styling
+    (Styles all of the articles on the main page)
  */
 
 main h2 {
@@ -212,6 +234,7 @@ article h3 {
 
 article p {
     text-indent: 1em;
+    /* font-size: 1vmin; */
 }
 
 /* 
@@ -222,6 +245,7 @@ footer img {
     margin-left: 15px;
 }
 
+/* All paragraphs within the first paragraph within the footer.. */
 footer p:first-of-type {
     text-align: right;
 }
@@ -236,6 +260,7 @@ footer p:first-of-type a:active {
     color: rgb(107, 105, 105);
 }
 
+/* All paragraphs within the last paragraph within the footer */
 footer p:last-of-type {
     clear: right;
     text-align: center;
@@ -246,6 +271,7 @@ footer p:last-of-type a {
     text-decoration: none;
 }
 
+/* If the list is active or hvered over. */
 footer p:last-of-type a:hover,
 footer p:last-of-type a:active {
     color: rgb(131, 130, 130);
